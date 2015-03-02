@@ -36,6 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Clear"/>
+    <Button
+        android:id="@+id/buttonToControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Control"
+        android:onClick="goToControl"/>
     <TextView
         android:id="@+id/response"
         android:layout_width="wrap_content"

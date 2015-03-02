@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -20,7 +21,18 @@ public class MainActivity extends Activity {
 
     TextView textResponse;
     EditText editTextAddress, editTextPort;
-    Button buttonConnect, buttonClear;
+    Button buttonConnect, buttonClear, buttonToControl;
+
+
+
+    public void goToControl (View view) {
+        //
+
+        Intent intent = new Intent(this, ControlActivity.class);
+        startActivity(intent);
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +44,8 @@ public class MainActivity extends Activity {
         buttonConnect = (Button) findViewById(R.id.connect);
         buttonClear = (Button) findViewById(R.id.clear);
         textResponse = (TextView) findViewById(R.id.response);
+        buttonToControl = (Button) findViewById(R.id.buttonToControl);
+
 
         buttonConnect.setOnClickListener(buttonConnectOnClickListener);
 
